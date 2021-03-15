@@ -1,0 +1,21 @@
+
+ù
+java:S1186 "ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(â”Å*8◊ÿ≠®Å/
+W	java:S125_"<This block of commented-out lines of code should be removed.(•ú¯
+8ä∫≈‡Ç/
+}
+java:S1450"[Remove the "byGenresList" field and declare it as a local variable in the relevant methods.(°◊Õﬂ¯ˇˇˇˇ8ä∫≈‡Ç/
+|
+java:S1450"_Remove the "topGenresAdapter" field and declare it as a local variable in the relevant methods.(‰”¯ﬁ8≠“‘‡Ç/
+O
+java:S2387#"-"mView" is the name of a field in "Fragment".(ºä˝˛ˇˇˇˇ8ÉÅ∞®Å/
+r
+java:S1450"URemove the "movies" field and declare it as a local variable in the relevant methods.(¨ë¥¬8âÒæ•Ç/
+J
+java:S1659"(Declare "rvTrending" on a separate line.(Ç∂©ä¯ˇˇˇˇ8ªö≥•Ç/
+M
+java:S1659"+Declare "rvTopByGenres" on a separate line.(Ç∂©ä¯ˇˇˇˇ8ªö≥•Ç/
+z
+java:S1450"]Remove the "moviesApdapter" field and declare it as a local variable in the relevant methods.(◊öÅÇ8ø∆À•Ç/
+J
+java:S1659"(Declare "rvTopRated" on a separate line.(Ç∂©ä¯ˇˇˇˇ8ªö≥•Ç/

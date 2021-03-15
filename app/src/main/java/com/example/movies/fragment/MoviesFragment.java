@@ -3,64 +3,110 @@ package com.example.movies.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import com.example.movies.R;
+import com.example.movies.adapter.MoviesApdapter;
+import com.example.movies.adapter.TopGenresAdapter;
+import com.example.movies.model.Movies;
+import com.example.movies.model.TopByGenres;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MoviesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class MoviesFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private RecyclerView rvNowPlaying,rvTrending,rvTopRated,rvTopByGenres;
+    private List<Movies> movies;
+    private MoviesApdapter moviesApdapter;
+    private List<TopByGenres> byGenresList;
+    private TopGenresAdapter topGenresAdapter;
+    SearchView searchView;
 
     public MoviesFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Movies.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MoviesFragment newInstance(String param1, String param2) {
-        MoviesFragment fragment = new MoviesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    private  View mView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_movies, container, false);
+        mView = inflater.inflate(R.layout.fragment_movies, container, false);
+        initView();
+        bindingView();
+        return mView;
+    }
+
+    private void bindingView() {
+        movies = new ArrayList<>();
+        movies.add(new Movies(R.drawable.moana));
+        movies.add(new Movies(R.drawable.mov2));
+        movies.add(new Movies(R.drawable.themartian));
+        movies.add(new Movies(R.drawable.blackp));
+        movies.add(new Movies(R.drawable.thewildrobot));
+        movies.add(new Movies(R.drawable.hediedwith));
+        movies.add(new Movies(R.drawable.mariasemples));
+        movies.add(new Movies(R.drawable.thevigitarian));
+        movies.add(new Movies(R.drawable.moana));
+        movies.add(new Movies(R.drawable.mov2));
+        movies.add(new Movies(R.drawable.themartian));
+        movies.add(new Movies(R.drawable.blackp));
+        movies.add(new Movies(R.drawable.thewildrobot));
+        movies.add(new Movies(R.drawable.hediedwith));
+        movies.add(new Movies(R.drawable.mariasemples));
+        movies.add(new Movies(R.drawable.thevigitarian));
+        movies.add(new Movies(R.drawable.moana));
+        movies.add(new Movies(R.drawable.mov2));
+        movies.add(new Movies(R.drawable.themartian));
+        movies.add(new Movies(R.drawable.blackp));
+        movies.add(new Movies(R.drawable.thewildrobot));
+        movies.add(new Movies(R.drawable.hediedwith));
+        movies.add(new Movies(R.drawable.mariasemples));
+        movies.add(new Movies(R.drawable.thevigitarian));
+        moviesApdapter = new MoviesApdapter(getActivity(),movies);
+        rvNowPlaying.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        rvTrending.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        rvTopRated.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        rvTrending.setAdapter(moviesApdapter);
+        rvNowPlaying.setAdapter(moviesApdapter);
+        rvTopRated.setAdapter(moviesApdapter);
+
+        byGenresList = new ArrayList<>();
+        byGenresList.add(new TopByGenres("Action"));
+        byGenresList.add(new TopByGenres("Adventure"));
+        byGenresList.add(new TopByGenres("Animation"));
+        byGenresList.add(new TopByGenres("Comedy"));
+        byGenresList.add(new TopByGenres("Crime"));
+        byGenresList.add(new TopByGenres("Documentary"));
+        byGenresList.add(new TopByGenres("Drama"));
+        byGenresList.add(new TopByGenres("Family"));
+        byGenresList.add(new TopByGenres("Fantasy"));
+        byGenresList.add(new TopByGenres("History"));
+        byGenresList.add(new TopByGenres("Horror"));
+        byGenresList.add(new TopByGenres("Music"));
+        byGenresList.add(new TopByGenres("Mystery"));
+        byGenresList.add(new TopByGenres("Romamce"));
+        byGenresList.add(new TopByGenres("Science Fiction"));
+
+        topGenresAdapter = new TopGenresAdapter(getActivity(),byGenresList);
+        rvTopByGenres.setAdapter(topGenresAdapter);
+        rvTopByGenres.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
+
+
+    }
+
+
+    private void initView(){
+        rvNowPlaying = mView.findViewById(R.id.rvNowPlaying);
+        rvTrending = mView.findViewById(R.id.rvTrending);
+        rvTopRated = mView.findViewById(R.id.rvTopRated);
+        rvTopByGenres = mView.findViewById(R.id.rvTopByGenres);
+//        searchView = mView.findViewById(R.id.search);
     }
 }

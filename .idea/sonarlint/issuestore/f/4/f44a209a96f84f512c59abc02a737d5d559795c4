@@ -1,0 +1,16 @@
+
+s
+java:S1104"VMake pouplarTab a static final constant or non-public and provide accessors if needed.(Çåú8ÒÍÁ/
+s
+java:S1104"WMake upcomingTab a static final constant or non-public and provide accessors if needed.(å˜ó-8ãÃ/
+Q
+java:S1444"/Make this "public static moviesTab" field final(üú›Íúÿÿÿÿ8ãÃ/
+M
+java:S1444"0Make this "public static pouplarTab" field final(Çåú8ÒÍÁ/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼œª˜úÿÿÿÿ
+W
+java:S1118":Add a private constructor to hide the implicit public one.(¼Øûì8ÒÍÁ/
+M
+java:S1444"1Make this "public static upcomingTab" field final(å˜ó-8ãÃ/
+w
+java:S1104"UMake moviesTab a static final constant or non-public and provide accessors if needed.(üú›Íúÿÿÿÿ8ãÃ/

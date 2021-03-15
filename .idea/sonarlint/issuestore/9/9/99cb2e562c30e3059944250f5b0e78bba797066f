@@ -1,0 +1,15 @@
+
+j
+java:S11920"HDefine a constant instead of duplicating this literal "Red Dot" 4 times.(ä’–òşÿÿÿÿ8Á¥«/
+m
+java:S11921"KDefine a constant instead of duplicating this literal "Spider Man" 4 times.(·Ş‘¸ûÿÿÿÿ8Á¥«/
+q
+java:S1192/"ODefine a constant instead of duplicating this literal "Monster Hunter" 4 times.(·ÔíÈÿÿÿÿÿ8Ï†¡«/
+|
+java:S1450"ZRemove the "popularList" field and declare it as a local variable in the relevant methods.(Èí§Ÿøÿÿÿÿ8ÃÚ «/
+
+java:S1450 "]Remove the "popularAdapter" field and declare it as a local variable in the relevant methods.(‘ûåÎùÿÿÿÿ8ìø§«/
+z
+java:S1450"XRemove the "rvPopular" field and declare it as a local variable in the relevant methods.(æô§öÿÿÿÿÿ8¡Ğ•«/
+p
+java:S1450%"SRemove the "view" field and declare it as a local variable in the relevant methods.(ØÊ»¶8Û½«/

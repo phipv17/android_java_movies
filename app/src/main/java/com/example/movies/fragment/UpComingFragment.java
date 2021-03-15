@@ -3,64 +3,58 @@ package com.example.movies.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.movies.R;
+import com.example.movies.adapter.UpcomingAdapter;
+import com.example.movies.model.Upcoming;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link UpComingFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class UpComingFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    private View mView;
+    private RecyclerView rvUpcoming;
+    UpcomingAdapter upcomingAdapter;
+    List<Upcoming> upcomingList;
     public UpComingFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment UpComing.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static UpComingFragment newInstance(String param1, String param2) {
-        UpComingFragment fragment = new UpComingFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_up_coming, container, false);
+        mView = inflater.inflate(R.layout.fragment_up_coming, container, false);
+        rvUpcoming = mView.findViewById(R.id.rvUpcoming);
+        upcomingList = new ArrayList<>();
+        upcomingList.add(new Upcoming(R.drawable.blackp));
+        upcomingList.add(new Upcoming(R.drawable.hediedwith));
+        upcomingList.add(new Upcoming(R.drawable.mariasemples));
+        upcomingList.add(new Upcoming(R.drawable.moana));
+        upcomingList.add(new Upcoming(R.drawable.mov2));
+        upcomingList.add(new Upcoming(R.drawable.themartian));
+        upcomingList.add(new Upcoming(R.drawable.thevigitarian));
+        upcomingList.add(new Upcoming(R.drawable.thewildrobot));
+        upcomingList.add(new Upcoming(R.drawable.blackp));
+        upcomingList.add(new Upcoming(R.drawable.hediedwith));
+        upcomingList.add(new Upcoming(R.drawable.mariasemples));
+        upcomingList.add(new Upcoming(R.drawable.moana));
+        upcomingList.add(new Upcoming(R.drawable.mov2));
+        upcomingList.add(new Upcoming(R.drawable.themartian));
+        upcomingList.add(new Upcoming(R.drawable.thevigitarian));
+        upcomingList.add(new Upcoming(R.drawable.thewildrobot));
+        upcomingList.add(new Upcoming(R.drawable.blackp));
+        upcomingList.add(new Upcoming(R.drawable.hediedwith));
+        upcomingAdapter = new UpcomingAdapter(getActivity(),upcomingList);
+        rvUpcoming.setAdapter(upcomingAdapter);
+        rvUpcoming.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        return mView;
     }
 }

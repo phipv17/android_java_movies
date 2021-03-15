@@ -2,4 +2,13 @@
     <string name="app_name">Movies</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title</string>
+    <string name="searchMovie">Search for movies</string>
+    <string name="nowPlaying">Now playing</string>
+    <string name="trendingMovies">Trending movies</string>
+    <string name="top_rated_movies">Top rated movies</string>
+    <string name="top_by_genres">Top by Genres</string>
+    <string name="action">Action</string>
+    <string name="popular">Popular</string>
+    <string name="film_name">Film Name</string>
 </resources>
